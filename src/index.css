@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  a {
+    @apply text-blue-600;
+  }
+  .open h3 {
+    @apply font-bold text-[1.1rem] mt-2 text-white;
+  }
+  .open p {
+    @apply text-white;
+  }
+
+  .open div:not(:first-child) {
+    @apply border-t-[1px] py-2;
+  }
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.grid-container {
+  display: grid;
+  /* grid-template-columns: 20rem auto 20rem; */
+  gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 18rem auto;
+  }
+}
+@media (min-width: 1280px) {
+  .grid-container {
+    grid-template-columns: 18rem auto 20rem;
+  }
+}
+
+.hr-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.line {
+  width: 90%;
+  background-color: red;
+  height: 2px;
+}
+
+.btn {
+  background: orange;
+  color: white;
+  padding: 5px 15px;
+  border: 2px solid white;
+}
+
+button.follow-btn:hover {
+  background: transparent;
+  color: black;
+  border-radius: 4px;
+  border: 2px solid orange;
+}
+
+button.login-btn:hover {
+  background: rgb(255, 176, 29);
+}
+
+.post-options {
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background-color: gray;
+  cursor: pointer;
+}
